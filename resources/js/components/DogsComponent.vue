@@ -22,15 +22,19 @@
             }
         },
         mounted() {
+
             this.loadBreeds();
         },
         methods:{
             loadBreeds() {
-                axios.get('https://dog.ceo/api/breeds/list/all')
-                .then(response => {
-                    console.log(response.data.data);
+                fetch('https://dog.ceo/api/breeds/list/all')
+                .then(function(response) {
+                    console.log(response.json())
                 })
-                .catch(error => console.log(error))
+                .catch(function() {
+
+                });
+
             }
         }
     }

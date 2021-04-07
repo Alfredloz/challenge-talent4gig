@@ -1982,11 +1982,9 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     loadBreeds: function loadBreeds() {
-      axios.get('https://dog.ceo/api/breeds/list/all').then(function (response) {
-        console.log(response.data.data);
-      })["catch"](function (error) {
-        return console.log(error);
-      });
+      fetch('https://dog.ceo/api/breeds/list/all').then(function (response) {
+        console.log(response.json());
+      })["catch"](function () {});
     }
   }
 });
