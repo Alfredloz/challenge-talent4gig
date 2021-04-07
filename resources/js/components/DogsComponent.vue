@@ -16,8 +16,22 @@
 
 <script>
     export default {
+        data(){
+            return{
+                breeds: null
+            }
+        },
         mounted() {
-            console.log('Component mounted.')
+            this.loadBreeds();
+        },
+        methods:{
+            loadBreeds() {
+                axios.get('https://dog.ceo/api/breeds/list/all')
+                .then(response => {
+                    console.log(response.data.data);
+                })
+                .catch(error => console.log(error))
+            }
         }
     }
 </script>

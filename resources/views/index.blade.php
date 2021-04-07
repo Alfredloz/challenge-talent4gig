@@ -10,10 +10,14 @@
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap" rel="stylesheet">
         {{-- css link --}}
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+        {{-- js link --}}
+    <script src="{{ asset('js/app.js') }}" defer></script>
     </head>
     <body>
      <h1>Dog List</h1>
-        {{-- js link --}}
-    <script src="{{ asset('js/app.js') }}" defer></script>
+     <div id="app">
+        <dogs-component></dogs-component>
+     </div>
+        
     </body>
 </html>
